@@ -1,8 +1,4 @@
 <template>
   Index
-  <NButton @click="router.push('/about')">About</NButton>
+  <GLink to="/demo">Demo</GLink>
 </template>
-
-<script lang="ts" setup>
-const router = useRouter();
-</script>

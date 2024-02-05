@@ -6,6 +6,7 @@ import VueJsx from "@vitejs/plugin-vue-jsx";
 import VueRouter from "unplugin-vue-router/vite";
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
+import Markdown from "unplugin-vue-markdown/vite";
 import UnoCSS from "unocss/vite";
 
 import { VueRouterAutoImports } from "unplugin-vue-router";
@@ -17,35 +18,38 @@ export default defineConfig({
 
     // https://github.com/posva/unplugin-vue-router
     VueRouter({
-      exclude: [
-        "**/components/**/*",
-      ],
+      exclude: ["**/components/**/*"],
+      extensions: [".vue", ".md"],
     }),
 
-    Vue(),
+    Vue({
+      include: [/\.vue$/, /\.md$/],
+    }),
     VueJsx(),
 
-    // https://github.com/antfu/unplugin-auto-import
+    // https://github.com/unplugin/unplugin-vue-markdown
+    Markdown({
+
+    }),
+
+    // https://github.com/unplugin/unplugin-auto-import
     AutoImport({
       imports: [
         "vue",
+        "@vueuse/core",
         VueRouterAutoImports,
         {
-          "naive-ui": [
-            "useDialog",
-            "useMessage",
-            "useNotification",
-            "useLoadingBar",
-          ],
+          "naive-ui": ["useDialog", "useMessage", "useNotification", "useLoadingBar"],
         },
       ],
     }),
 
-    // https://github.com/antfu/vite-plugin-components
+    // https://github.com/unplugin/unplugin-vue-components
     Components({
-      resolvers: [
-        NaiveUiResolver(),
-      ],
+      dirs: ["src/components", "./components"],
+      extensions: ["vue", "md"],
+      resolvers: [NaiveUiResolver()],
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
     }),
 
     UnoCSS(),
