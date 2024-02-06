@@ -1,6 +1,6 @@
 // import { shallowMount } from "@vue/test-utils";
 
-// import GLink from "../GLink.vue";
+// import GLink from "./GLink.vue";
 
 // describe("gLink", () => {
 //   it("链接文字正确", () => {

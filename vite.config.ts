@@ -39,6 +39,7 @@ export default defineConfig({
       imports: [
         "vue",
         "@vueuse/core",
+        "vitest",
         VueRouterAutoImports,
         {
           "naive-ui": ["useDialog", "useMessage", "useNotification", "useLoadingBar"],
