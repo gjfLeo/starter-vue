@@ -14,7 +14,7 @@
         Normal
       </NButton>
       <NButton circle @click="isDark = !isDark">
-        <template #icon><div :class="isDark ? 'i-carbon:moon' : 'i-carbon:sun'" /></template>
+        <template #icon><div class="i-carbon:sun dark:i-carbon:moon" /></template>
       </NButton>
     </NSpace>
 
@@ -81,6 +81,10 @@
 </template>
 
 <script lang="ts" setup>
+useHead({
+  title: "Demo",
+});
+
 const message = useMessage();
 
 const isDark = useDark();

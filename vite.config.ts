@@ -8,6 +8,7 @@ import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import Markdown from "unplugin-vue-markdown/vite";
 import UnoCSS from "unocss/vite";
+import UnheadVite from "@unhead/addons/vite";
 
 import { VueRouterAutoImports } from "unplugin-vue-router";
 import { NaiveUiResolver } from "unplugin-vue-components/resolvers";
@@ -20,6 +21,7 @@ export default defineConfig({
     VueRouter({
       exclude: ["**/components/**/*"],
       extensions: [".vue", ".md"],
+      dts: "types/router.d.ts",
     }),
 
     Vue({
@@ -40,8 +42,10 @@ export default defineConfig({
         VueRouterAutoImports,
         {
           "naive-ui": ["useDialog", "useMessage", "useNotification", "useLoadingBar"],
+          "@unhead/vue": ["useHead"],
         },
       ],
+      dts: "types/imports.d.ts",
     }),
 
     // https://github.com/unplugin/unplugin-vue-components
@@ -50,9 +54,13 @@ export default defineConfig({
       extensions: ["vue", "md"],
       resolvers: [NaiveUiResolver()],
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      dts: "types/components.d.ts",
     }),
 
     UnoCSS(),
+
+    // https://unhead.unjs.io/
+    UnheadVite(),
   ],
   resolve: {
     alias: {

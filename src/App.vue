@@ -32,7 +32,13 @@ import { NLayoutContent, darkTheme, dateZhCN, lightTheme, zhCN } from "naive-ui"
 import themeOverridesLight from "@/constants/naive-ui/theme-override-light";
 import themeOverridesDark from "@/constants/naive-ui/theme-override-dark";
 
-const isDark = useDark();
-const theme = computed(() => isDark.value ? darkTheme : lightTheme);
-const themeOverrides = computed(() => isDark.value ? themeOverridesDark : themeOverridesLight);
+const theme = ref(lightTheme);
+const themeOverrides = ref(themeOverridesLight);
+useDark({
+  onChanged: (value, defaultHandler, mode) => {
+    defaultHandler(mode);
+    theme.value = value ? darkTheme : lightTheme;
+    themeOverrides.value = value ? themeOverridesDark : themeOverridesLight;
+  },
+});
 </script>

@@ -1,6 +1,7 @@
 import { createApp } from "vue";
-import { createPinia } from "pinia";
 import { createRouter, createWebHistory } from "vue-router/auto";
+import { createHead } from "@unhead/vue";
+import { createPinia } from "pinia";
 
 import App from "./App.vue";
 
@@ -13,6 +14,9 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
 });
 app.use(router);
+
+const head = createHead();
+app.use(head);
 
 const pinia = createPinia();
 app.use(pinia);

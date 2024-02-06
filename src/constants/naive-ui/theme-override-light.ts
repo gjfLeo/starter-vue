@@ -35,4 +35,4 @@ export default {
   Table: {
     tdColor: "#F5F7F5FF",
   },
-} satisfies GlobalThemeOverrides;
+} as GlobalThemeOverrides;
