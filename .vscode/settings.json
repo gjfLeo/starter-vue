@@ -40,4 +40,7 @@
     "yaml",
     "toml",
   ],
+
+  // https://github.com/microsoft/vscode-css-languageservice/blob/main/docs/customData.md
+  "css.customData": [".vscode/unocss.css-data.json"],
 }
