@@ -15,7 +15,13 @@
                 class="h-screen" content-class="p-4" :native-scrollbar="false"
               >
                 <main style="max-width: 72rem; margin: 0 auto">
-                  <RouterView />
+                  <RouterView v-slot="{ Component, route }">
+                    <Transition name="page-transition" mode="out-in">
+                      <div :key="route.path">
+                        <component :is="Component" />
+                      </div>
+                    </Transition>
+                  </RouterView>
                 </main>
               </NLayoutContent>
             </NLayout>
@@ -28,7 +34,7 @@
 </template>
 
 <script lang="ts" setup>
-import { NLayoutContent, darkTheme, dateZhCN, lightTheme, zhCN } from "naive-ui";
+import { darkTheme, dateZhCN, lightTheme, zhCN } from "naive-ui";
 import themeOverridesLight from "@/constants/naive-ui/theme-override-light";
 import themeOverridesDark from "@/constants/naive-ui/theme-override-dark";
 
@@ -42,3 +48,17 @@ useDark({
   },
 });
 </script>
+
+<style>
+.page-transition-enter-active,
+.page-transition-leave-active {
+  transition: opacity 0.2s;
+  /* position: absolute;
+  width: 100%; */
+}
+
+.page-transition-enter-from,
+.page-transition-leave-to {
+  opacity: 0;
+}
+</style>

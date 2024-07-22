@@ -1,6 +1,8 @@
 <template>
   <NH1>starter-vue</NH1>
 
+  <GLink to="/">返回首页</GLink>
+
   <NH2>UI框架</NH2>
 
   <NH3>NaiveUI</NH3>
