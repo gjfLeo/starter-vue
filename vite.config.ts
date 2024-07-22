@@ -52,7 +52,7 @@ export default defineConfig({
 
     // https://github.com/unplugin/unplugin-vue-components
     Components({
-      dirs: ["src/components", "./components"],
+      dirs: ["src/components"],
       extensions: ["vue", "md"],
       resolvers: [NaiveUiResolver()],
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
