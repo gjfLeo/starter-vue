@@ -7,7 +7,9 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    GLink: typeof import('./../src/components/GLink.vue')['default']
+    AppLayout: typeof import('./../src/components/app/AppLayout.vue')['default']
+    AppRoot: typeof import('./../src/components/app/AppRoot.vue')['default']
+    GLink: typeof import('./../src/components/shared/GLink.vue')['default']
     NA: typeof import('naive-ui')['NA']
     NButton: typeof import('naive-ui')['NButton']
     NConfigProvider: typeof import('naive-ui')['NConfigProvider']

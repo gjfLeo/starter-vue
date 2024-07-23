@@ -53,6 +53,7 @@ export default defineConfig({
     // https://github.com/unplugin/unplugin-vue-components
     Components({
       dirs: ["src/components"],
+      globalNamespaces: ["shared"],
       extensions: ["vue", "md"],
       resolvers: [NaiveUiResolver()],
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
