@@ -33,12 +33,9 @@ importers:
       '@gjfleo/eslint-config':
         specifier: ^1.0.15
         version: 1.0.15(@antfu/eslint-config@2.23.1(@unocss/eslint-plugin@0.61.5(eslint@9.7.0)(typescript@5.5.3))(@vue/compiler-sfc@3.4.33)(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint@9.7.0)(typescript@5.5.3)(vitest@2.0.4(@types/node@20.14.11)(jsdom@24.1.1)))(eslint@9.7.0)
-      '@iconify-json/carbon':
-        specifier: ^1.1.36
-        version: 1.1.36
-      '@iconify-json/mdi':
-        specifier: ^1.1.67
-        version: 1.1.67
+      '@iconify-json/mingcute':
+        specifier: ^1.1.18
+        version: 1.1.18
       '@tsconfig/node20':
         specifier: ^20.1.4
         version: 20.1.4
@@ -556,11 +553,8 @@ packages:
     resolution: {integrity: sha512-d2CGZR2o7fS6sWB7DG/3a95bGKQyHMACZ5aW8qGkkqQpUoZV6C0X7Pc7l4ZNMZkfNBf4VWNe9E1jRsf0G146Ew==}
     engines: {node: '>=18.18'}
 
-  '@iconify-json/carbon@1.1.36':
-    resolution: {integrity: sha512-NC3VcqLtwLZpi7+LeXj+99/byv+asrnCQxiDNCZV6hKr9WcNh6C25kJguJYfN+dV54kOkw78e+6PitQi2Bppnw==}
-
-  '@iconify-json/mdi@1.1.67':
-    resolution: {integrity: sha512-00nllHES8hyACwIfgySlQgAE6MKgpr2wsKfpifMiZWZ9aXC5l4Jb0lR3lJSWwXgOW6kzAOdzC3T+2VOfBBZ13A==}
+  '@iconify-json/mingcute@1.1.18':
+    resolution: {integrity: sha512-P5szgBqUMv8XVjZpbVT5eG1XtqpRPgfvZWxOR/uSqBwmVroHpxN5+nbLTHj9HJxL16msMsNbA294b69MNEQzaw==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -3579,11 +3573,7 @@ snapshots:
 
   '@humanwhocodes/retry@0.3.0': {}
 
-  '@iconify-json/carbon@1.1.36':
-    dependencies:
-      '@iconify/types': 2.0.0
-
-  '@iconify-json/mdi@1.1.67':
+  '@iconify-json/mingcute@1.1.18':
     dependencies:
       '@iconify/types': 2.0.0
 
