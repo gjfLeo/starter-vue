@@ -16,7 +16,7 @@
         Normal
       </NButton>
       <NButton circle @click="isDark = !isDark">
-        <template #icon><div class="i-carbon:sun dark:i-carbon:moon" /></template>
+        <template #icon><div class="i-mingcute:sun-line dark:i-mingcute:moon-line" /></template>
       </NButton>
     </NSpace>
 
@@ -58,22 +58,13 @@
   <NTable class="w-auto" :single-line="false">
     <NTbody>
       <NTr>
-        <NTh><GLink href="https://icones.js.org/collection/carbon">@iconify/carbon</GLink></NTh>
-        <NTd><div class="i-carbon:add" /></NTd>
-        <NTd><div class="i-carbon:subtract" /></NTd>
-        <NTd><div class="i-carbon:search" /></NTd>
-        <NTd><div class="i-carbon:copy" /></NTd>
-        <NTd><div class="i-carbon:trash-can" /></NTd>
-        <NTd><div class="i-carbon:overflow-menu-horizontal" /></NTd>
-      </NTr>
-      <NTr>
-        <NTh><GLink href="https://icones.js.org/collection/mdi">@iconify/mdi</GLink></NTh>
-        <NTd><div class="i-mdi:plus" /></NTd>
-        <NTd><div class="i-mdi:minus" /></NTd>
-        <NTd><div class="i-mdi:magnify" /></NTd>
-        <NTd><div class="i-mdi:content-copy" /></NTd>
-        <NTd><div class="i-mdi:trash-can" /></NTd>
-        <NTd><div class="i-mdi:dots-horizontal" /></NTd>
+        <NTh><GLink href="https://icones.js.org/collection/mingcute">@iconify/mingcute</GLink></NTh>
+        <NTd><div class="i-mingcute:add-line" /></NTd>
+        <NTd><div class="i-mingcute:minimize-line" /></NTd>
+        <NTd><div class="i-mingcute:search-2-line" /></NTd>
+        <NTd><div class="i-mingcute:copy-line" /></NTd>
+        <NTd><div class="i-mingcute:delete-2-line" /></NTd>
+        <NTd><div class="i-mingcute:more-1-line" /></NTd>
       </NTr>
     </NTbody>
   </NTable>
