@@ -1,4 +1,4 @@
-import { RouterLinkStub, mount } from "@vue/test-utils";
+import { mount, RouterLinkStub } from "@vue/test-utils";
 
 import GLink from "./GLink.vue";
 

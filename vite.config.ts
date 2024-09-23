@@ -1,18 +1,18 @@
-import { URL, fileURLToPath } from "node:url";
+import { fileURLToPath, URL } from "node:url";
 
-import { defineConfig } from "vite";
+import UnheadVite from "@unhead/addons/vite";
+import postcssUnoCss from "@unocss/postcss";
 import Vue from "@vitejs/plugin-vue";
 import VueJsx from "@vitejs/plugin-vue-jsx";
-import VueRouter from "unplugin-vue-router/vite";
-import { VueRouterAutoImports } from "unplugin-vue-router";
-import AutoImport from "unplugin-auto-import/vite";
-import Components from "unplugin-vue-components/vite";
-import { NaiveUiResolver } from "unplugin-vue-components/resolvers";
-import Markdown from "unplugin-vue-markdown/vite";
-import UnoCSS from "unocss/vite";
-import UnheadVite from "@unhead/addons/vite";
 import postcssAutoprefixer from "autoprefixer";
-import postcssUnoCss from "@unocss/postcss";
+import UnoCSS from "unocss/vite";
+import AutoImport from "unplugin-auto-import/vite";
+import { NaiveUiResolver } from "unplugin-vue-components/resolvers";
+import Components from "unplugin-vue-components/vite";
+import Markdown from "unplugin-vue-markdown/vite";
+import { VueRouterAutoImports } from "unplugin-vue-router";
+import VueRouter from "unplugin-vue-router/vite";
+import { defineConfig } from "vite";
 
 // https://vitejs.dev/config/
 export default defineConfig({

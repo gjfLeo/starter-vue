@@ -1,8 +1,8 @@
+import { createHead } from "@unhead/vue";
+import { createPinia } from "pinia";
 import { createApp } from "vue";
 import { createRouter, createWebHistory } from "vue-router";
 import { routes } from "vue-router/auto-routes";
-import { createHead } from "@unhead/vue";
-import { createPinia } from "pinia";
 
 import App from "./App.vue";
 

@@ -20,9 +20,9 @@
 </template>
 
 <script lang="ts" setup>
-import { darkTheme, dateZhCN, lightTheme, zhCN } from "naive-ui";
-import themeOverridesLight from "@/configs/naive-ui/theme-override-light";
 import themeOverridesDark from "@/configs/naive-ui/theme-override-dark";
+import themeOverridesLight from "@/configs/naive-ui/theme-override-light";
+import { darkTheme, dateZhCN, lightTheme, zhCN } from "naive-ui";
 
 const theme = ref(lightTheme);
 const themeOverrides = ref(themeOverridesLight);
