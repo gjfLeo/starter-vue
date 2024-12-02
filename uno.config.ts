@@ -1,3 +1,4 @@
+import { themeVariables } from "@gjfleo/naive-ui-theme";
 import {
   defineConfig,
   presetAttributify,
@@ -7,8 +8,6 @@ import {
   transformerDirectives,
   transformerVariantGroup,
 } from "unocss";
-
-import theme from "./src/configs/theme";
 
 export default defineConfig({
   presets: [
@@ -29,5 +28,5 @@ export default defineConfig({
     [/^(?:grid-)?col-gap-(\d+)$/, ([,d]) => ({ "column-gap": `${Number(d) / 4}rem` })],
     [/^(?:grid-)?row-gap-(\d+)$/, ([,d]) => ({ "row-gap": `${Number(d) / 4}rem` })],
   ],
-  theme,
+  theme: themeVariables,
 });
