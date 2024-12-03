@@ -13,6 +13,7 @@ import Markdown from "unplugin-vue-markdown/vite";
 import { VueRouterAutoImports } from "unplugin-vue-router";
 import VueRouter from "unplugin-vue-router/vite";
 import { defineConfig } from "vite";
+import VueDevTools from "vite-plugin-vue-devtools";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -29,6 +30,7 @@ export default defineConfig({
       include: [/\.vue$/, /\.md$/],
     }),
     VueJsx(),
+    VueDevTools(),
 
     // https://github.com/unplugin/unplugin-vue-markdown
     Markdown({
