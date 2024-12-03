@@ -49,8 +49,16 @@
 
   <NH3>PostCSS</NH3>
   <NUl>
-    <NLi><GLink href="https://github.com/postcss/autoprefixer">autoprefixer</GLink>：<span class="select-all">自动添加厂商前缀</span></NLi>
-    <NLi><GLink href="https://unocss.dev/integrations/postcss">@unocss/postcss</GLink>：<span class="unocss-postcss-test">UnoCSS 集成</span></NLi>
+    <NLi>
+      <GLink href="https://github.com/postcss/autoprefixer">autoprefixer</GLink>
+      <span>：</span>
+      <span class="select-all">自动添加厂商前缀</span>
+    </NLi>
+    <NLi>
+      <GLink href="https://unocss.dev/integrations/postcss">@unocss/postcss</GLink>
+      <span>：</span>
+      <span class="unocss-postcss-test">UnoCSS 集成</span>
+    </NLi>
   </NUl>
 
   <NH3>图标</NH3>
