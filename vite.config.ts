@@ -39,6 +39,10 @@ export default defineConfig({
 
     // https://github.com/unplugin/unplugin-auto-import
     AutoImport({
+      dirs: [
+        "./src/composables",
+        "./src/utils",
+      ],
       imports: [
         "vue",
         "@vueuse/core",

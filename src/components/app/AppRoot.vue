@@ -20,18 +20,9 @@
 </template>
 
 <script lang="ts" setup>
-import { themeOverridesDark, themeOverridesLight } from "@gjfleo/naive-ui-theme";
-import { darkTheme, dateZhCN, lightTheme, zhCN } from "naive-ui";
+import { dateZhCN, zhCN } from "naive-ui";
 
-const theme = ref(lightTheme);
-const themeOverrides = ref(themeOverridesLight);
-useDark({
-  onChanged: (value, defaultHandler, mode) => {
-    defaultHandler(mode);
-    theme.value = value ? darkTheme : lightTheme;
-    themeOverrides.value = value ? themeOverridesDark : themeOverridesLight;
-  },
-});
+const { theme, themeOverrides } = useThemes();
 </script>
 
 <style>
