@@ -29,6 +29,7 @@ declare module 'vue' {
     NLoadingBarProvider: typeof import('naive-ui')['NLoadingBarProvider']
     NMessageProvider: typeof import('naive-ui')['NMessageProvider']
     NNotificationProvider: typeof import('naive-ui')['NNotificationProvider']
+    NP: typeof import('naive-ui')['NP']
     NSpace: typeof import('naive-ui')['NSpace']
     NTable: typeof import('naive-ui')['NTable']
     NTbody: typeof import('naive-ui')['NTbody']

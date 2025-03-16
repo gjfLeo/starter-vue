@@ -41,7 +41,7 @@ export default defineConfig({
     AutoImport({
       dirs: [
         "./src/composables",
-        "./src/utils",
+        "./src/utils/**",
       ],
       imports: [
         "vue",
@@ -80,7 +80,7 @@ export default defineConfig({
   css: {
     postcss: {
       plugins: [
-        postcssAutoprefixer(),
+        postcssAutoprefixer() as any,
         postcssUnoCss(),
       ],
     },

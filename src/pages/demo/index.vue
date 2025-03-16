@@ -85,9 +85,19 @@
     <NLi><GLink href="https://github.com/posva/unplugin-vue-router">unplugin-vue-router</GLink>：根据文件路径自动生成路由</NLi>
     <NLi><GLink href="https://github.com/unplugin/unplugin-vue-markdown">unplugin-vue-markdown</GLink>：将 Markdown 转为 Vue 组件</NLi>
   </NUl>
+
+  <NH2>其他</NH2>
+
+  <NH3>VueUse</NH3>
+  <NP>当前的时间戳：{{ timestamp }}</NP>
+
+  <NH3>Day.js</NH3>
+  <NP>已停留×10：{{ duration.humanize() }}</NP>
 </template>
 
 <script lang="ts" setup>
+import dayjs from "dayjs";
+
 useHead({
   title: "Demo",
 });
@@ -95,6 +105,11 @@ useHead({
 const message = useMessage();
 
 const isDark = useDark();
+
+const timestamp = useTimestamp();
+const time1 = ref(dayjs());
+const time2 = computed(() => dayjs(timestamp.value));
+const duration = computed(() => dayjs.duration(time2.value.diff(time1.value) * 10));
 </script>
 
 <style scoped>
