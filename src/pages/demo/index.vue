@@ -99,8 +99,9 @@ const isDark = useDark();
 
 <style scoped>
 .unocss-postcss-test {
+  @apply transition-all;
   &:hover {
-    @apply opacity-50;
+    @apply opacity-25;
   }
 }
 </style>
