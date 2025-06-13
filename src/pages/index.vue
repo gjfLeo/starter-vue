@@ -4,5 +4,5 @@
 </template>
 
 <script lang="ts" setup>
-useHead({ title: "starter-vue" });
+useHead({ title: "Liger" });
 </script>

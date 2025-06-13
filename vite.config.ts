@@ -49,8 +49,8 @@ export default defineConfig({
         "vitest",
         VueRouterAutoImports,
         {
-          "naive-ui": ["useDialog", "useMessage", "useNotification", "useLoadingBar"],
           "@unhead/vue": ["useHead"],
+          "naive-ui": ["useDialog", "useMessage", "useNotification", "useLoadingBar"],
         },
       ],
       dts: "types/imports.d.ts",
@@ -80,7 +80,7 @@ export default defineConfig({
   css: {
     postcss: {
       plugins: [
-        postcssAutoprefixer() as any,
+        postcssAutoprefixer(),
         postcssUnoCss(),
       ],
     },

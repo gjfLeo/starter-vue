@@ -48,4 +48,3 @@ pnpm test:unit
 ## 已知问题
 
 - dayjs 通过 vite 自动导入时，其类型检查失效。可能关联：[unplugin-auto-import#348](https://github.com/unplugin/unplugin-auto-import/issues/348)
-- postcssAutoprefixer 类型错误
